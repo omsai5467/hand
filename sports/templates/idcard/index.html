@@ -1,220 +1,264 @@
 
 {% load static %}
 
+<style>
+
+*{
+    margin: 00px;
+    padding: 00px;
+    box-sizing: content-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFF4FD;
+    flex-direction: row;
+    flex-flow: wrap;
+
+}
+
+.headerlogo{
+    height: 1vh;
+    width: 100%;
+    display: flex;
+    padding-left: 20%;
+    font-weight: 500;
+    font-size: 26px;
+    font-family: poppins;
+    
+}
+
+li,a {
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 16px;
+    color: #244BA6;
+    align-items: right;
+    display: inline;
+    margin: inherit;
+}
+
+.font{
+    height: 375px;
+    width: 250px;
+    position: relative;
+    border-radius: 10px;
+    font-family: poppins;
+}
+
+.top{
+    height: 30%;
+    width: 100%;
+    background-color: #244BA6;
+    position: relative;
+    z-index: 5;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.bottom{
+    height: 70%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-family: poppins;
+}
+
+.top img{
+    height: 100px;
+    width: 100px;
+    background-color: #e6ebe0;
+    border-radius: 10px;
+    position: absolute;
+    top:60px;
+    left: 75px;
+    border: 1px solid #D5A02E;
+}
+.bottom p{
+    position: relative;
+    top: 60px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+    text-emphasis: spacing;
+    font-family: poppins;
+}
+.bottom .desi{
+    font-size:12px;
+    color: #313131;
+    font-weight: normal;
+    font-family: poppins;
+}
+.bottom .no{
+    font-size: 15px;
+    font-weight: normal;
+}
+.barcode img
+{
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    margin: 5px;
+}
+.barcode{
+    text-align: center;
+    position: relative;
+    top: 70px;
+}
+
+.back
+{
+    height: 375px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: #244BA6;
+
+}
+.qr img{
+    height: 90px;
+    width: 50%;
+    margin: 20px;
+       
+    text-align: center;
+    padding-left: 18%;
+}
+.Details {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+
+
+.details-info{
+    color: white;
+    text-align: left;
+    padding: 5px;
+    line-height: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 22px;
+    font-family: poppins;
+    font-weight: 500;
+}
+
+.logo {
+    height: 40px;
+    width: 150px;
+    padding: 40px;
+}
+
+.logo img{
+    height: 100%;
+    width: 100%;
+    color: white ;
+
+}
+.padding{
+    padding-right: 20px;
+}
+
+@media screen and (max-width:400px)
+{
+    .container{
+        height: 130vh;
+    }
+    .container .front{
+        margin-top: 50px;
+    }
+}
+@media screen and (max-width:600px)
+{
+    .container{
+        height: 130vh;
+    }
+    .container .front{
+        margin-top: 50px;
+    }
+
+}
 
 
 
+</style>
 
 
-
-
-
-  <!-- new html ....... -->
-
-
-
-  <!DOCTYPE html>
-<html lang="en" class="no-js">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>HFI | Handball Federation of India Player ID Card</title>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="PRO Card - Material Resume / CV / vCard Template" />
-    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Material CV, portfolio" />
-    <meta name="author" content="lmtheme" />
-    <link rel="shortcut icon" href="{% static 'favicon.png'%}">
-
-    <link rel="stylesheet" href="{% static 'css/id2/bootstrap.min.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/id2/normalize.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/id2/animate.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/id2/owl.carouse.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/id2/magnific-popup.css'%}" type="text/css">
-    <link rel="stylesheet" href="{% static 'css/id2/main.css'%}" type="text/css">
-
-   <script src="{% static 'js/jquery-2.1.3.min.js'%}"></script>
-    <script src="{% static 'js/modernizr.custom.js'%}"></script>
-
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-  </head>
-
-  <body class="material-template">
-    <!-- Loading animation -->
-    <div class="preloader">
-      <div class="preloader-animation">
-        <div class="preloader-spinner">
-        </div>
-      </div>
-    </div>
-    <!-- /Loading animation -->
-
-    <div id="page" class="page">
-      <!-- Header -->
-      <header id="site_header" class="header mobile-menu-hide">
-        <div class="header-content">
-          <div class="site-title-block mobile-hidden">
-            <div class="site-title"><span>Handball</span> Federation of India</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="idCard.css">
+    <title>ID Card</title>
+    
+<!--     
+    So lets start -->
+</head>
+<body>
+    <div class="header">
+  
+  <div class="header-right">
+    <a class="active" href="/all">Dashboard</a>
+    <a href="/logout">Logout</a>
+    
+  </div>
+</div>
+    <div class="headerlogo">
+            <div class="site-title"><span style="color: #244BA6">Handball</span> Federation of India</div>
           </div>
-
-          <!-- Navigation -->
-          <div class="site-nav">
-            <!-- Main menu -->
-            <ul id="nav" class="site-main-menu">
-              <li>
-                <a class="pt-trigger" href="/all" data-animation="62">Dashboard</a><!-- href value = data-id without # of .pt-page. -->
-              </li>
-              <li>
-                <a class="pt-trigger" href="/logout" data-animation="62">Logout</a>
-              </li>
-            </ul>
-            <!-- /Main menu -->
-          </div>
-          <!-- Navigation -->
-        </div>
-      </header>
-      <!-- /Header -->
-
-      <!-- Mobile Header -->
-      <div class="mobile-header mobile-visible">
-        <div class="mobile-logo-container">
-          <div class="mobile-site-title">Handball Federation of India</div>
-        </div>
-
-        <a class="menu-toggle mobile-visible">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <!-- /Mobile Header -->
-
-      <!-- Main Content -->
-      <div id="main" class="site-main">
-        <!-- Page changer wrapper -->
-        <div class="pt-wrapper">
-          <!-- Subpages -->
-          <div class="subpages">
-
-            <!-- Home Subpage -->
-            <section class="pt-page" data-id="home">
-              <div class="section-inner start-page-content">
-                <div class="page-header">
-                  <div class="row">
-
-                      <div style="position :relative; left: 8%;" class="photo">
-                        <img style="   width: 500px ; height: 200px ;  "    class="omsai"   src="{{    d.photo.url  }}" alt="">
-                      </div>
-
-
-
-                  </div>
-                </div>
-
-                <div class="page-content">
-                  <div class="row">
-
-
-                       <div class="col-sm-6 col-md-6 col-lg-6">
-
-
-                    <!-- <br> -->
-                        <div class="block-title">
-                          <h1 style="font-family: 'Poppins';font-size:30px; font-weight:800;text-transform:uppercase;textwrap:no-wrap;color : #244BA6; text-align: center; white-space: nowrap; ">   <strong>{{    d.firstname   }} {{   d.lastname  }}</strong></h1>
-                        </div>
-
-<br>
-
-
-                    <div class="col-sm-6 col-md-6 col-lg-6">
-                      <ul class="info-list">
-                      <li><span  class="title"><b>Player ID:</b></span><span style="font-family: 'Poppins'; position:relative;  left:20%;color:#244BA6;font-size:14px; font-weight: 900;text-transform:uppercase;text-align:center " class="value">{{     d.playerid    }}</span></li>
-                      <li><span style = "font-family: 'Poppins'; position:relative; left: 20%; -align: center" class="title"><b>State</b></span><span style="color:#244BA6; font-size:14px; font-weight: 900; text-align: center ">{{   d.state }}</span></li>
-
-
-                      </ul>
-                       <br><br>
-                      <div class="logo">
-
-                        <img style="" src="{% static 'images/id2/HFI-Logoid.png'%}" alt="">
-                      </div>
-
-                        <div class="qr">
-
-
-                  <div class = "qrcode" id = "qrcode"></div>
-                      </div>
+    
+        <div class="container">
+            <div class="padding">
+                <div class="font">
+                    <div class="top">
+                        <img src="{{    d.photo.url  }}" alt = "Not Found">
                     </div>
-
-                  </div>
-                </div>
-              </div>
-                </div>
+                    <div class="bottom">
+                        <p style="color: #244BA6">{{  d.firstname  }} {{  d.lastname }}</p>
+                        <p class="desi">Member of HFI</p>
+                        <div class="barcode">
+                         <img  src="{% static 'images/id2/HFI-Logoid.png'%}" alt="Not Found">
+                        </div>
+                        <br>
+                        <p class="no">ID No : <span style="color: #244BA6">{{ d.playerid  }}</span></p>
+                        <p class="no">State: <span style="color: #244BA6">{{ d.state  }}</span></p>
+                    </div>
                 </div>
             </div>
-
-
-
-            </section>
-
-
-            <!-- End of Home Subpage -->
-            <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-
-                        <div class="center download-resume">
-                          <a onclick="window.print()" class="btn btn-secondary">Print Id Card</a>
-                        </div>
-
+                <div class="back">
+                <h1 class="Details"><b>Information<b></h1>
+                <hr class="hr">
+                <div class="details-info">
+                    <p><b>Email : </b></p>
+                    <p>{{  d.Email  }}</p>
+                    <p><b>Mobile No: </b></p>
+                    <p>{{  d.phonenumber }}</p>
+                    <p><b>District:</b></p>
+                    <p>{{ d.dist  }}india</p>
+                    </div>
+                    <div class="qr img">
+                        <div class = "qrcode" id = "qrcode"></div>
                     </div>
 
+                    
+                    <hr>
+                </div>
+                    
             </div>
-
-
-        <!-- /Page changer wrapper -->
-
-      <!-- /Main Content -->
-
-    <footer>
-      <div class="copyrights"><p>© 2022 All rights reserved. Handball Federation of India</p></div>
-    </footer>
-
-    <script type="text/javascript" src="{% static 'js/bootstrap.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/pages-switcher.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/validator.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.shuffle.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/masonry.pkgd.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/owl.carousel.min.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.magnific-popup.min.js'%}"></script>
-    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY"></script> -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-    <script type="text/javascript" src="{% static 'js/jquery.googlemap.js'%}"></script>
-    <script type="text/javascript" src="{% static 'js/main.js'%}"></script>
-    <script src="{% static 'js/qrcode.js'%}" defer></script>
-  </body>
+            
+            </div>
+        </div>
+</body>
 </html>
 
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-
-  function printDiv2()
-  {
-      html2canvas((main), {
-          onrendered: function(canvas) {
-              var img = canvas.toDataURL();
-              window.open(img);
-
-              var blob = new Blob(img, {type: "image/jpeg"});
-              var filesaver = saveAs(blob, "my image.png");
-        }
-      });
-  }
-
-</script>
 
 
 
@@ -236,39 +280,3 @@ qr.makeCode(textInput);
   </script>
 
 
-
-  <style>
-    .qrcode{
-      position: absolute;
-      left:200px;
-      top: 80px;
-      height: 60px;
-      width: 60px;
-    }
-  </style>
-
-
-
-
-
-<style type="text/css">
-
-.omsai{
-  height: 550px;
-  width: 500px;
-
-
-
-
-}
-.photo{
-  height: 550px;
-  width: 500px;
-
-
-
-
-}
-
-
-</style>

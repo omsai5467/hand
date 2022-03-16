@@ -10,6 +10,7 @@ from django.contrib.auth import logout
 from django.http import HttpResponse
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic.base import RedirectView
 objectID = None
 def getall():
     ap = playerdata.objects.all().filter(state = "andhra_pradesh(AP)").count()
